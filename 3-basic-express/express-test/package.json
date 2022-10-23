@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "greet": "echo 'Hi there!"
   },
   "keywords": [],
-  "author": "",
+  "author": "Zhengrui Lu <lu.zhengr@northeastern.edu>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
