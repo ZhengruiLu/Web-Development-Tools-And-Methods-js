@@ -1,0 +1,9 @@
+## Summary
+
+- [x] basic-html-css work done
+- [x] a .gitignore file was added to the root of my repository 
+
+Name: Zhengrui Lu
+NUID: 002197932
+
+Thank you!
