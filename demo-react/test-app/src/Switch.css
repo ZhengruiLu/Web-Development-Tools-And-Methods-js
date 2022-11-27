@@ -1,0 +1,10 @@
+.switch {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    background-color: #c0ffee;
+}
+
+.switch-on {
+    background-color: skyblue;
+}
