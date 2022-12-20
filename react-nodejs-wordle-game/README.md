@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Project - *Wordle_Game* 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Wordle_Game** is a web-based word guessing game. Users can take multiple turns making guesses until guess the correct word. The game will display reminders if there is an invalid login or invalid guess, or other info like loading.
 
-## Available Scripts
+Submitted by: **Zhengrui Lu**
 
-In the project directory, you can run:
+Time spent: **50** hours spent in total
 
-### `npm start`
+## User Stories
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The following functionality is completed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* [X] User can **login with valid name**
+* [X] User has the option to **logout** if the user is already logged in
+* [X] User can **play the wordle game after log in**. A "new game" means a new secret word is selected, the number of guesses made is reset to 0, and the list of possible words is reset to the full list
+* [X] User can see the **statistics about this user's previous games preserved** 
+* [X] User can interact with the game page and get **reminders**. For example, **valid guess and the number of its matched letters, invalid guess, and correct guess** 
+* [X] User can have **unlimited turns** to make a guess, and get **calculated score** once win. The score is decided by the number of turns this user uses.
+* [X] User has the option to **start a new game** if the user is already logged
 
-### `npm test`
+## Tools
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This sample involves both:
 
-### `npm run build`
+- an express server.js to host RESTFUL services and act as a static file server
+- a create-react-app-based SPA built as static files that consume those services
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [X] Programming languages: JaveScript, CSS
+* [X] Server Environment: Node.js
+* [X] Node.js web application framework: Express
+* [X] Front-end JavaScript library: React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to use this project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Setup
 
-### `npm run eject`
+- Run `npm install`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Notice for Windows users
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Where I say 'run `npm start`' you will need to run `npm run start-win`
+- You can look at the differences in these package.json scripts
+- There is a library (`cross-env`) that would resolve these differences, but we can see what is happening.  Out in the "Real World" I recommend using cross-env to write scripts that work on multiple operating systems.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running for development
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- In a terminal, run `npm start` to start the express server
+  - The "start" script in package.json was changed
+- In a DIFFERENT terminal, run `npm run dev` to start the development CRA server
+  - This runs what used to be the "start" script
+  - You need BOTH servers running for development
+- Visit localhost on port **3000** (the development server port)
+  - Service calls will be proxied by the development server to the express server
+    - The browser only ever makes service calls to port 3000 (the port of the page)
 
-## Learn More
+### Running for production
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- In a terminal, run `npm run build` to create the static files in the `build/` directory
+- In a terminal, run `npm start` to start the express server
+  - The "start" script in package.json was changed
+  - Only ONE server is running
+- Visit localhost on port **4000** (the express server port)
+  - You could run the express server on port 3000 since the development server isn't using it, but using the different port should reduce confusion
+  - Service calls go directly to the express server on port 4000
+    - The browser only ever makes service calls to port 4000 (the port of the page)
+  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Video Walkthrough
 
-### Code Splitting
+Here's a walkthrough of implemented user stories:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img src='walkthrough_wordle_game_react.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-### Analyzing the Bundle Size
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Notes
 
-### Making a Progressive Web App
+Describe any challenges encountered while building the app.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* [X] Learn **debug** steps and find the exact error
+* [X] Inspect error info from the browser's dev tool. For example, console and network
+* [X] Make sure the data is **defined** before use it in the client-side
+* [X] Try 3 different **HTTP methods** in a RESTful way
+* [X] As soon as my **session** expires, guide the user to the login page. 
+* [X] Improve the **UI / UX** with the dev tool Elements of the browser
 
-### Advanced Configuration
+## Future Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* [ ] Add leaderboard for the game
+* [ ] Add sharing button and link with social media
+* [ ] Improve the game rules with more reminders and levels
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    Copyright [yyyy] [name of copyright owner]
 
-### `npm run build` fails to minify
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
