@@ -1,32 +1,27 @@
-.App {
+/* App.css for the display of the SPA */
+/* divide the login page and game page into separate styles */
+
+html {
+  background-color:   black;
+}
+
+/* login page */
+.login-page {
   text-align: center;
 }
 
-.App-logo {
+.app-logo, .app-loading {
   height: 40vmin;
   pointer-events: none;
+  border-radius: 50%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .app-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -36,3 +31,209 @@
     transform: rotate(360deg);
   }
 }
+
+.login-body {
+  background-color: #daebe8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.about-title {
+  font-size:large;
+  text-align: center;
+  padding: 14px 15px;
+  
+}
+
+.intro-container {
+  background-color: #daebe8;
+  color: black;
+  margin-left: 21%;
+  margin-right: 21%;
+  
+  text-align: left;
+  font-size: large;
+  flex-wrap: wrap;
+  padding-top: 5px;
+  border-style: solid;
+  border-color: #61dafb;
+  border-width: 1px;
+  word-wrap: break-word;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+/* game page */
+.game-info{
+  padding: 14px 15px;
+  margin-top: 10px;
+  padding-left: 14px;
+}
+
+.game-page { 
+  height: 100%;
+  margin: 10;
+  font-family: sans-serif;
+
+  padding-left:25px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: calc(5px + 1.5vmin);
+}
+
+.game-body {
+  background-color:   #77a8a8;
+  padding-left:25px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.title {
+  font-size: calc(10px + 1.5vmin);
+  padding: 12px 20px;
+}
+
+.container {
+  background-color: #daebe8;
+  color: black;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.game-state {
+  padding: 12px 20px;
+}
+
+.reminder {
+  color: orange;
+}
+
+/* for win reminder action */
+.win-reminder {
+  color: red;
+  font-size: calc(10px + 2vmin);
+  animation: 10s wordsLoop linear infinite normal;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@keyframes wordsLoop {
+  0% {
+      transform: translateX(200px);
+      -webkit-transform: translateX(200px);
+  }
+  100% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes wordsLoop {
+  0% {
+      transform: translateX(200px);
+      -webkit-transform: translateX(200px);
+  }
+  100% {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+  }
+}
+
+.list-container {
+  padding: 12px 20px;
+  background-color: whitesmoke;
+  color: #000;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  justify-content: center;
+}
+
+.list li {
+  min-width: 10ch;
+  padding: 0.25rem;
+  border-left: 0.5px solid #cfe0e8;
+  border-right: 0.5px solid #cfe0e8;
+  border-top: 0.5px solid #cfe0e8;
+  border-bottom: 0.5px solid gray;
+}
+
+ul li{
+  float: left;
+  width: 50%;
+}
+ul{
+  list-style-type: disc;
+}
+
+/* general */
+button {
+  border: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  margin: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn{
+  background-color: rgb(233, 190, 17);
+  font-size: calc(10px + 2vmin);
+}
+
+.guess-btn{
+  background-color: rgb(233, 190, 17);
+  font-size: calc(10px + 2vmin);
+}
+
+.new-btn {
+  background-color: #77a8a8;
+  width: 100%;
+  font-size: calc(10px + 2vmin);
+}
+
+.logout-btn{
+  background-color: #618685;
+  width: 100%;
+  font-size: calc(10px + 2vmin);
+}
+
+.login-input, .word-input{
+  font-size: calc(10px + 2vmin);
+}
+
+.message, .login-waiting, .loading {
+  color: #618685;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+
