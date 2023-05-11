@@ -69,7 +69,7 @@ Where I say 'run `npm start`' you will need to run `npm run start-win`
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./walkthrough_wordle_game_react.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='web-development-tools-and-methods-js/walkthrough_wordle_game_react.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
