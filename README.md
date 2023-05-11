@@ -18,6 +18,14 @@ The following functionality is completed:
 * [X] User can have **unlimited turns** to make a guess, and get **calculated score** once win. The score is decided by the number of turns this user uses.
 * [X] User has the option to **start a new game** if the user is already logged
 
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='walkthrough_wordle_game_react.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
 ## Tools
 
 This sample involves both:
@@ -64,15 +72,6 @@ Where I say 'run `npm start`' you will need to run `npm run start-win`
   - Service calls go directly to the express server on port 4000
     - The browser only ever makes service calls to port 4000 (the port of the page)
   
-
-## Video Walkthrough
-
-Here's a walkthrough of implemented user stories:
-
-<img src='walkthrough_wordle_game_react.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
 ## Notes
 
 Describe any challenges encountered while building the app.
