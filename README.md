@@ -38,6 +38,23 @@ This sample involves both:
 * [X] Node.js web application framework: Express
 * [X] Front-end JavaScript library: React
 
+## Notes
+
+Describe any challenges encountered while building the app.
+
+* [X] Learn **debug** steps and find the exact error
+* [X] Inspect error info from the browser's dev tool. For example, console and network
+* [X] Make sure the data is **defined** before use it in the client-side
+* [X] Try 3 different **HTTP methods** in a RESTful way
+* [X] As soon as my **session** expires, guide the user to the login page. 
+* [X] Improve the **UI / UX** with the dev tool Elements of the browser
+
+## Future Development
+
+* [ ] Add leaderboard for the game
+* [ ] Add sharing button and link with social media
+* [ ] Improve the game rules with more reminders and levels
+
 ## How to use this project
 
 ### Setup
@@ -71,23 +88,6 @@ Where I say 'run `npm start`' you will need to run `npm run start-win`
   - You could run the express server on port 3000 since the development server isn't using it, but using the different port should reduce confusion
   - Service calls go directly to the express server on port 4000
     - The browser only ever makes service calls to port 4000 (the port of the page)
-  
-## Notes
-
-Describe any challenges encountered while building the app.
-
-* [X] Learn **debug** steps and find the exact error
-* [X] Inspect error info from the browser's dev tool. For example, console and network
-* [X] Make sure the data is **defined** before use it in the client-side
-* [X] Try 3 different **HTTP methods** in a RESTful way
-* [X] As soon as my **session** expires, guide the user to the login page. 
-* [X] Improve the **UI / UX** with the dev tool Elements of the browser
-
-## Future Development
-
-* [ ] Add leaderboard for the game
-* [ ] Add sharing button and link with social media
-* [ ] Improve the game rules with more reminders and levels
 
 ## License
 
